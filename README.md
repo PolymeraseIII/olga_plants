@@ -1,6 +1,6 @@
-### olga_plants
-## Wykresy część I
-Poniżej przedstawiono wykresy przedstawiające długości łodygi w zależności od stężenia wyciągu wodnego dla poszczególnych gatunków roślin. Wykresy są pogrupowane zmienną kategoryczną oznaczającą dzień pomiaru, przedstawioną w ramce nad wykresem.
+## Olga kiełkowanie
+### Ocena jakości zmiennych
+Poniżej przedstawiono wykresy przedstawiające średnie arytmetyczne z długości łodygi w zależności od stężenia wyciągu wodnego dla poszczególnych gatunków roślin oraz 95% przedział ufności dla średniej. Wykresy są pogrupowane zmienną kategoryczną oznaczającą dzień pomiaru, przedstawioną w ramce nad wykresem.
 
 ![](plots/burak.png)
 ![](plots/jeczmien.png)
@@ -17,3 +17,7 @@ Ze względu na nieścisłości w danych (mniejsze wartości długości łodygi d
 - rzepak,
 - sałata,
 - sosna.
+
+W trakcie analizy wykresów należy także zauważyć wysokie wartości 95\% przedziału ufności dla gatunków owies i jęczmień, co w następstwie może skutkować nieistotnymi wynikami testów statystycznych opartych na średniej arytmetycznej.
+
+### Normalność rozkładu zmiennych
