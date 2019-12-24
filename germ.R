@@ -12,6 +12,7 @@ library(ggthemes)
 #set the working directory from which the files will be read from
 path <- "/home/mati/git/olga_plants/data"
 path2 <- "/home/mati/git/olga_plants/plots"
+path3 <- "/home/mati/git/olga_plants/plots/normality"
 setwd(path)
 
 #create a list of the files from your target directory
@@ -62,10 +63,33 @@ name <- unique(plant$Plant)
 for (i in seq_along(name)) {
   p <- plant %>% filter(Plant == name[i]) %>% 
     ggplot(aes(x = Concentration, y = shoot_length)) + 
-    geom_bar(stat = "identity") + 
+    stat_summary(fun.y = mean, geom = "bar") + 
+    stat_summary(fun.data = mean_ci, geom = "errorbar") + 
     facet_wrap(.~day) + 
     my_theme + 
-    labs(title = name[i], y = "Długość pędu", x = "Concentration")
-  ggsave(p, file=paste(name[i], ".png", sep=''), scale=2)  
-  print(p)
+    labs(title = name[i], y = "Długość pędu", x = "Stężenie")
+  ggsave(p, file=paste(name[i], ".png", sep=''), scale=2)
+}
+
+##excluding irrelevant observations
+
+## testing data for normality
+
+setwd(path3)
+plant %>% filter(Plant == "rzeżucha" & shoot_length != 0) %>%
+ggplot(aes(sample = shoot_length)) + 
+  stat_qq() + 
+  stat_qq_line()
+
+plant %>% filter(Plant == "burak") %>%select(shoot_length) %>% unlist() %>%
+  shapiro.test()
+for (i in seq_along(name)) {
+  p <- plant %>% filter(Plant == name[i]) %>% 
+    ggplot(aes(x = Concentration, y = shoot_length)) + 
+    stat_summary(fun.y = mean, geom = "bar") + 
+    stat_summary(fun.data = mean_ci, geom = "errorbar") + 
+    facet_wrap(.~day) + 
+    my_theme + 
+    labs(title = name[i], y = "Długość pędu", x = "Stężenie")
+  ggsave(p, file=paste(name[i], ".png", sep=''), scale=2)
 }
