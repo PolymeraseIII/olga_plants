@@ -25,6 +25,6 @@ W trakcie analizy wykresów należy także zauważyć wysokie wartości 95% prze
 Zmienne zostały ocenione pod kątem zgodności z rozkładem normalnym za pomocą testu Shapiro-Wilka. Zostały wykonane wwykresy kwantyl-kwantyl (ang. *qq plots*) obrazujące zgodność danych z rozkładem normalnym. Na podstawie przeprowadzonego testu we wszystkich przypadkach odrzucono hipotezę zerową o zgodności danych z rozkładem normalnym. Z tego powodu do dalszej analizy wybrano testy  nieparametryczne.
 
 ![](plots/normality/jeczmien_qqplot.png)
-![](plots/owies_qqplot.png)
-![](plots/pszenica_qqplot.png)
-![](plots/rzeżucha_qqplot.png)
+![](plots/normality/owies_qqplot.png)
+![](plots/normality/pszenica_qqplot.png)
+![](plots/normality/rzeżucha_qqplot.png)
