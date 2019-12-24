@@ -72,24 +72,25 @@ for (i in seq_along(name)) {
 }
 
 ##excluding irrelevant observations
+plant <- filter(plant, Plant %in% c("jeczmien", "owies", "pszenica", "rzeżucha"))
 
 ## testing data for normality
-
 setwd(path3)
-plant %>% filter(Plant == "rzeżucha" & shoot_length != 0) %>%
-ggplot(aes(sample = shoot_length)) + 
-  stat_qq() + 
-  stat_qq_line()
-
-plant %>% filter(Plant == "burak") %>%select(shoot_length) %>% unlist() %>%
-  shapiro.test()
+name <- unique(plant$Plant)
+dd <- unique(plant$day)
 for (i in seq_along(name)) {
-  p <- plant %>% filter(Plant == name[i]) %>% 
-    ggplot(aes(x = Concentration, y = shoot_length)) + 
-    stat_summary(fun.y = mean, geom = "bar") + 
-    stat_summary(fun.data = mean_ci, geom = "errorbar") + 
+  sw <- plant %>% filter(Plant == name[i] & day == dd[j]) %>% select(shoot_length) %>% unlist()
+    if (var(sw) != 0)
+      sw <- shapiro.test(sw)
+
+  subt <- paste(paste(sw$method, "W =", sep = "; "), 
+    paste(round(sw$statistic, 3), "p.value =", sep = "; "), round(sw$p.value, 3), sep = " ")
+  p <- plant %>% filter(Plant == name[i] & shoot_length != 0) %>%
+    ggplot(aes(sample = shoot_length)) + 
+    stat_qq() + 
+    stat_qq_line() +
     facet_wrap(.~day) + 
     my_theme + 
-    labs(title = name[i], y = "Długość pędu", x = "Stężenie")
-  ggsave(p, file=paste(name[i], ".png", sep=''), scale=2)
+    labs(title = name[i], subtitle = subt, y = "Próbka", x = "Kwantyl teoretyczny") 
+  ggsave(p, file=paste(name[i], "_qqplot", ".png", sep=''), scale=2)
 }
