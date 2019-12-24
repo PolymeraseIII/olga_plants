@@ -10,3 +10,10 @@ Poniżej przedstawiono wykresy przedstawiające długości łodygi w zależnośc
 ![](plots/rzeżucha.png)
 ![](plots/salata.png)
 ![](plots/sosna.png)
+
+Ze względu na nieścisłości w danych (mniejsze wartości długości łodygi dla kolejnych dni bądź braki danych) zaprzestano dalszej analizy dla gatunków: 
+
+- burak,
+- rzepak,
+- sałata,
+- sosna.
