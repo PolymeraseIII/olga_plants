@@ -31,9 +31,15 @@ Zmienne zostały ocenione pod kątem zgodności z rozkładem normalnym za pomoc�
 
 ### Test sumy rang Wilcoxona
 
-Dane zanalizowane zostały testem nieparametrycznym znakowanych rang Wilcoxona w celu sprawdzenia różnic pomiędzy poszczególnymi stężeniami, a kontrolą, odrębnie dla każdej rośliny i każdego dnia. Przedstawiono je na wykresach:
+Dane zanalizowane zostały testem nieparametrycznym znakowanych rang Wilcoxona w celu sprawdzenia różnic pomiędzy poszczególnymi stężeniami, a kontrolą, odrębnie dla każdej rośliny i każdego dnia. Przedstawiono je na wykresach, kolejno dla:
+
+* jęczmienia,
+* owsa,
+* pszenicy,
+* rzeżuchy
 
 ![Jęczmień](plots/pubr/jeczmien_pubr.png)
+*image_caption*
 ![](plots/pubr/owies_pubr.png)
 ![](plots/pubr/pszenica_pubr.png)
 ![](plots/pubr/rzeżucha_pubr.png)
