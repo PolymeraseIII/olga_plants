@@ -56,3 +56,5 @@ Dane zanalizowane zostały testem nieparametrycznym znakowanych rang Wilcoxona w
 Uzyskane w wyniku testu Wilcoxona wartości poziomu istotności p przedstawiono na heatmapie:
 
 ![](plots/pubr/pval_pubr.png)
+
+Dane zebrane przez Olgę Wilk.
