@@ -36,11 +36,23 @@ Dane zanalizowane zostały testem nieparametrycznym znakowanych rang Wilcoxona w
 ![](plots/pubr/jeczmien_pubr.png)
 *Jęczmień, poziomy istotności oznaczono: ns: p > 0.05, \*: p <= 0.05,  \*\*: p <= 0.01, \*\*\*: p <= 0.001, \*\*\*\*: p <= 0.0001.*
 
+* * *
+
 ![](plots/pubr/owies_pubr.png)
 *Owies, poziomy istotności oznaczono: ns: p > 0.05, \*: p <= 0.05,  \*\*: p <= 0.01, \*\*\*: p <= 0.001, \*\*\*\*: p <= 0.0001.*
+
+* * *
 
 ![](plots/pubr/pszenica_pubr.png)
 *Pszenica, poziomy istotności oznaczono: ns: p > 0.05, \*: p <= 0.05,  \*\*: p <= 0.01, \*\*\*: p <= 0.001, \*\*\*\*: p <= 0.0001.*
 
+* * *
+
 ![](plots/pubr/rzeżucha_pubr.png)
 *Rzeżucha, poziomy istotności oznaczono: ns: p > 0.05, \*: p <= 0.05,  \*\*: p <= 0.01, \*\*\*: p <= 0.001, \*\*\*\*: p <= 0.0001.*
+
+* * *
+
+Uzyskane w wyniku testu Wilcoxona wartości poziomu istotoności p przedstawiono na heatmapie:
+
+![](plots/pubr/pval_pubr.png)
