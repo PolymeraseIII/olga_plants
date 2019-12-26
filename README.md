@@ -33,8 +33,8 @@ Zmienne zostały ocenione pod kątem zgodności z rozkładem normalnym za pomoc�
 
 Dane zanalizowane zostały testem nieparametrycznym znakowanych rang Wilcoxona w celu sprawdzenia różnic pomiędzy poszczególnymi stężeniami, a kontrolą, odrębnie dla każdej rośliny i każdego dnia. Przedstawiono je na wykresach, kolejno dla:
 
-![(plots/pubr/jeczmien_pubr.png)
-*Jęczmień,poziomy istotności oznaczono*
+![](plots/pubr/jeczmien_pubr.png)
+*Jęczmień, poziomy istotności oznaczono:*
 
 ![](plots/pubr/owies_pubr.png)
 ![](plots/pubr/pszenica_pubr.png)
